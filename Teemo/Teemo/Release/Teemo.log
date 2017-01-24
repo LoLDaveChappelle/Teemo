@@ -1,0 +1,12 @@
+﻿  stdafx.cpp
+  dllmain.cpp
+  PluginSDK.cpp
+  Teemo.cpp
+c:\users\everett\documents\visual studio 2015\projects\teemo\teemo\Color.h(19): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+c:\users\everett\documents\visual studio 2015\projects\teemo\teemo\Color.h(24): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+     Creating library C:\Users\Everett\Documents\Visual Studio 2015\Projects\Teemo\Release\Teemo.lib and object C:\Users\Everett\Documents\Visual Studio 2015\Projects\Teemo\Release\Teemo.exp
+  Generating code
+  All 164 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Teemo.vcxproj -> C:\Users\Everett\Documents\Visual Studio 2015\Projects\Teemo\Release\Teemo.dll
+  Teemo.vcxproj -> C:\Users\Everett\Documents\Visual Studio 2015\Projects\Teemo\Release\Teemo.pdb (Full PDB)

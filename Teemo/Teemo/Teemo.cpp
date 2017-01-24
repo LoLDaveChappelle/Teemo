@@ -65,12 +65,6 @@ void MenuItem()
 
 
 	/*
-	 * Draw category Skins
-	 */
-	Skins = Menu->AddMenu("Skins");
-
-
-	/*
 	 * KS MODE OPTION
 	 */
 	Menu->CheckBox("KS MODE", true);
@@ -92,12 +86,6 @@ void MenuItem()
 	DrawCursor = Drawing->CheckBox("Draw Cursor", true);
 	DrawRange = Drawing->AddInteger("Range:", 1, 255, 255);
 
-
-	/*
-	 * Skins category options
-	 */
-	EnableSkins = Skins->CheckBox("Enabled", false);
-	SkinID = Skins->AddInteger("Skin", 1, 255, 255);
 
 }
 
@@ -150,7 +138,7 @@ bool Shroominrange()
 {
 	for (auto minion : GEntityList->GetAllMinions(true, false,true))
 	{
-		if (minion->ChampionName() == "teemomushroom" && GEntityList->Player()->IsValidTarget(minion, R->Range()))
+		if (std::string(minion->ChampionName()) == "teemomushroom")
 		{
 			return true;
 		}
@@ -175,7 +163,7 @@ void Combo()
 		}
 	}
 
-	if (Noxious_Trap->Enabled())
+	if (Noxious_Trap->Enabled() && Shroominrange() == false)
 	{
 		R->CastOnTarget(GTargetSelector->FindTarget(ClosestPriority, SpellDamage, R->Range()));
 	}
